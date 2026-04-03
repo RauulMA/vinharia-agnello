@@ -3,27 +3,37 @@
     border: 0;
 }
 html {
-    margin: 20px 20px 20px 30px;
-    border: 20px 20px 20px 30px;
+    height: 100%;
+    margin-top: 30px;
+    font-family: 'Segoe UI', sans-serif; /* Uma fonte mais moderna */
 }
+
 header {
     display: flex;
     background-color: black;
     border-radius: 40px;
-    width: 70%;
+    width: 80%;
     justify-content: space-evenly;
     align-items: center;
     margin: 0 auto;
-    padding: 15px 15px;
     color: white;
 }
 
+header h1 {
+    /* min: 18px, ideal: 3% da tela, max: 32px */
+    font-size: clamp(13px, 1vw, 32px); 
+}
+
+header nav ul li a {
+    font-size: clamp(6px, 1vw, 20px); 
+}
+
 nav ul {
-    display: flex;       /* Alinha os <li> lado a lado */
-    list-style: none;    /* Remove as bolinhas (bullets) */
-    padding: 0;          /* Remove o recuo padrão da lista */
+    display: flex;
+    list-style: none;
+    padding: 0;
     margin: 0;
-    gap: 20px;           /* Cria um espaço entre cada item */
+    gap: 20px;
 }
 
 .Alinhar_h1_ul {
@@ -32,14 +42,111 @@ nav ul {
     align-items: center;
 }
 
+header nav ul li a:hover {
+    color: #390068;      /* Muda para um tom de vinho ao passar o mouse */
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.3); /* Brilho suave */
+}
+
 main {
     display: flex;
+    width: 80%;
     margin-top: 50px;
-    width: 60%;
+    flex: 1;
+    flex-direction: column;
     align-items: center;
+}
+
+main section {
+    width: 100%; 
+    margin-bottom: 40px; /* Espaçamento entre as seções */
 }
 
 .Posicionar_texto_vinho {
     display: grid;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
+    gap: 20px;
+    align-items: center;
 }
+
+body {
+    display: flex; /* Mudamos de grid para flex */
+    flex-direction: column; /* Alinha os itens (header, main, footer) em coluna */
+    min-height: 100vh; /* Força o body a ter no mínimo a altura total da tela */
+    margin: 0;
+    align-items: center; /* Mantém a centralização horizontal que você queria */
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+header img {
+    width: auto;
+    height: 100px;
+    object-fit: contain;
+    border-radius: 40px;
+}
+
+footer {
+    background-color: gray;
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+    color: white;
+}
+
+.destaques {
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    justify-content: center;
+    gap: 30px; /* Espaçamento igual entre os cards */
+}
+
+header nav ul li a {
+    text-decoration: none;      /* Remove o sublinhado padrão */
+    color: white;               /* Cor do texto */
+    font-weight: 500;           /* Deixa a letra um pouco mais "gordinha" */
+    text-transform: uppercase;  /* Deixa tudo em MAIÚSCULO (opcional) */
+    letter-spacing: 1px;        /* Espaçamento entre as letras */
+    transition: 0.3s;           /* Suaviza a mudança de cor no hover */
+}
+
+.anuncio {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff; /* Fundo branco para destacar do cinza claro */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
+    border: 1px solid #eee; /* Borda bem fininha */
+    transition: all 0.3s ease;
+}
+
+/* Estilo para as fotos dos vinhos nos destaques */
+.anuncio img {
+    width: auto;
+    height: 250px;       /* Altura fixa para todos os vinhos ficarem alinhados */
+    object-fit: contain; /* Garante que a garrafa apareça inteira sem esticar */
+    margin-bottom: 15px;
+    transition: transform 0.3s; /* Efeito suave para o hover */
+}
+
+.anuncio:hover img {
+    transform: scale(1.05);
+}
+
+.anuncio:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px); /* O card todo sobe levemente */
+}
+
+.anuncio h3 {
+    font-family: sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+}
+
