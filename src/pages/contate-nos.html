@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a Vinharia Agnello. Tire suas dúvidas sobre nossos rótulos, solicite orçamentos ou receba dicas de harmonização dos nossos especialistas.">
+    <meta name="keywords" content="contato vinharia agnello, suporte vinhos, harmonização sp, atendimento personalizado vinhos">
+    <title>Contate-nos – Vinharia Agnello</title>
+    <link rel="stylesheet" href="/vinharia-agnello/src/css/style.css">
+    
+    <style>
+        /* Estilos específicos para a página de contato */
+        .contato-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .botoes-contato {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            background-color: #7b1e1e;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background-color: #5a1414;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="/vinharia-agnello/src/assets/imgs/Logo.png" alt="Logo Vinharia Agnello">
+        <div class="Alinhar_h1_ul">
+            <h1>Vinheria Agnelo</h1>
+            <nav>
+                <ul>
+                    <li><a href="/vinharia-agnello/index.html">Home</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/produto.html">Produtos</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/historia.html">Nossa História</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/quemsomos.html">Quem Somos</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/contate-nos.html">Contate-nos</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contato-container">
+        <h1>Nosso Contato</h1>
+        
+        <div class="form-wrapper">
+            <form action="#" method="POST" class="form-estilizado">
+                
+                <label for="email">Insira seu e-mail:</label>
+                <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                
+                <label for="tel">Insira seu telefone:</label>
+                <input type="tel" id="tel" name="tel" placeholder="(11) 99999-9999">
+                
+                <label for="mensagem">Descreva o motivo do contato:</label>
+                <textarea id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea>
+                
+                <div class="botoes-contato">
+                    <button type="submit">Enviar Mensagem</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Vinharia Agnello - Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

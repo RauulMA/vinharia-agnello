@@ -1,13 +1,27 @@
+/* 1. RESET E CONFIGURAÇÕES GLOBAIS */
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     border: 0;
 }
+
 html {
     height: 100%;
-    margin-top: 30px;
-    font-family: 'Segoe UI', sans-serif; /* Uma fonte mais moderna */
+    font-family: 'Segoe UI', Arial, sans-serif;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #3b0a0a;
+    color: white;
+    margin: 0;
+    align-items: center;
+}
+
+/* 2. HEADER */
 header {
     display: flex;
     background-color: black;
@@ -15,25 +29,13 @@ header {
     width: 80%;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 auto;
+    margin: 30px auto 0;
     color: white;
+    padding: 10px 20px;
 }
 
 header h1 {
-    /* min: 18px, ideal: 3% da tela, max: 32px */
-    font-size: clamp(13px, 1vw, 32px); 
-}
-
-header nav ul li a {
-    font-size: clamp(6px, 1vw, 20px); 
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    gap: 20px;
+    font-size: clamp(13px, 1.5vw, 32px); 
 }
 
 .Alinhar_h1_ul {
@@ -42,11 +44,28 @@ nav ul {
     align-items: center;
 }
 
-header nav ul li a:hover {
-    color: #390068;      /* Muda para um tom de vinho ao passar o mouse */
-    text-shadow: 0px 0px 8px rgba(255,255,255,0.3); /* Brilho suave */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: clamp(10px, 1vw, 18px);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #b52a2a;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.3);
+}
+
+/* 3. LAYOUT PRINCIPAL */
 main {
     display: flex;
     width: 80%;
@@ -58,95 +77,128 @@ main {
 
 main section {
     width: 100%; 
-    margin-bottom: 40px; /* Espaçamento entre as seções */
+    margin-bottom: 60px;
 }
 
 .Posicionar_texto_vinho {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide em duas colunas iguais */
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    text-align: left;
+}
+
+/* 4. CARDS DE PRODUTOS / ANÚNCIOS (MIX CSS1 + CSS2) */
+.container, .destaques {
+    display: flex;
+    justify-content: space-around;
+    gap: 50px;
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+.anuncio, .produto {
+    flex: 1;
+    min-width: 220px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    background-color: white;
+    color: #3b0a0a;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
 }
 
-body {
-    display: flex; /* Mudamos de grid para flex */
-    flex-direction: column; /* Alinha os itens (header, main, footer) em coluna */
-    min-height: 100vh; /* Força o body a ter no mínimo a altura total da tela */
-    margin: 0;
-    align-items: center; /* Mantém a centralização horizontal que você queria */
+.anuncio:hover, .produto:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
+.anuncio img, .produto img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.anuncio h3, .produto h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.preco {
+    font-size: 20px;
+    font-weight: bold;
+    color: #b8860b;
+    margin-top: auto;
+}
+
+/* 5. FOOTER */
+footer {
+    background-color: #1a1a1a;
+    width: 100%;
+    padding: 30px 0;
+    text-align: center;
+    color: white;
+    margin-top: auto;
+}
+
+/* 6. AJUSTES DE IMAGENS GERAIS */
 img {
     max-width: 100%;
     height: auto;
 }
 
 header img {
+    height: 80px;
     width: auto;
-    height: 100px;
     object-fit: contain;
-    border-radius: 40px;
 }
 
-footer {
-    background-color: gray;
-    width: 100%;
-    padding: 20px 0;
-    text-align: center;
-    color: white;
-}
-
-.destaques {
-    display: flex;
-    margin-top: 30px;
-    width: 100%;
-    justify-content: center;
-    gap: 30px; /* Espaçamento igual entre os cards */
-}
-
-header nav ul li a {
-    text-decoration: none;      /* Remove o sublinhado padrão */
-    color: white;               /* Cor do texto */
-    font-weight: 500;           /* Deixa a letra um pouco mais "gordinha" */
-    text-transform: uppercase;  /* Deixa tudo em MAIÚSCULO (opcional) */
-    letter-spacing: 1px;        /* Espaçamento entre as letras */
-    transition: 0.3s;           /* Suaviza a mudança de cor no hover */
-}
-
-.anuncio {
-    flex: 1;
+.form-estilizado {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #fff; /* Fundo branco para destacar do cinza claro */
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
     padding: 20px;
-    border-radius: 20px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave */
-    border: 1px solid #eee; /* Borda bem fininha */
-    transition: all 0.3s ease;
+    border-radius: 15px;
 }
 
-/* Estilo para as fotos dos vinhos nos destaques */
-.anuncio img {
-    width: auto;
-    height: 250px;       /* Altura fixa para todos os vinhos ficarem alinhados */
-    object-fit: contain; /* Garante que a garrafa apareça inteira sem esticar */
-    margin-bottom: 15px;
-    transition: transform 0.3s; /* Efeito suave para o hover */
+.form-estilizado label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
-.anuncio:hover img {
-    transform: scale(1.05);
-}
-
-.anuncio:hover {
-    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-    transform: translateY(-5px); /* O card todo sobe levemente */
-}
-
-.anuncio h3 {
-    font-family: sans-serif;
+.form-estilizado input, .form-estilizado textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #7b1e1e;
+    background: white;
     color: #333;
-    font-size: 1.2rem;
+    font-family: inherit;
 }
 
+.form-estilizado textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+#missao-principal {
+    padding: 60px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+#lista-destaques {
+    border-top: 1px solid #7b1e1e;
+    padding-top: 30px;
+    margin-top: 10px;
+}
