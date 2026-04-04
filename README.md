@@ -45,3 +45,15 @@ Links dos conteúdos externos:
 Vídeo do index: https://www.youtube.com/embed/Ac559iPwbEs
 
 Pisa da Uva: https://maps.app.goo.gl/i47RuAQrPaYnVxhr7
+
+-------------------------------------------------------------------------------------------------------
+
+Desenvolvido por:
+
+Lucas Rodrigues dos santos - RM571778
+
+Raul Moreira Andrade - RM571042
+
+Guilherme Henrique Reis Gimenez - RM563389
+
+Rafael de Souza - RM568777
