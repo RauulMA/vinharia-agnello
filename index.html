@@ -3,63 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Check-Point – Projeto em Grupo: Site da Vinharia Agnello</title>
+    <meta name="description" content="Bem-vindo à Vinharia Agnello. Tradição de 15 anos em São Paulo oferecendo os melhores rótulos e experiências sensoriais.">
+    <meta name="keywords" content="vinho tinto, adega sp, vinharia agnello, comprar vinhos, harmonização de vinhos">
+    <title>Vinheria Agnello – Tradição e Sabor</title>
     <link rel="stylesheet" href="/vinharia-agnello/src/css/style.css">
 </head>
 <body>
     <header>
-        <img src="/vinharia-agnello/src/assets/imgs/Logo.png" alt="">
+        <img src="/vinharia-agnello/src/assets/imgs/Logo.png" alt="Logo Vinharia Agnello">
         <div class="Alinhar_h1_ul">
             <h1>Vinheria Agnelo</h1>
             <nav>
                 <ul>
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li>
-                        <a href="produto.html">Produtos</a>
-                    </li>
-                    <li>
-                        <a href="#">Nossa História</a>
-                    </li>
-                    <li>
-                        <a href="#">Quem Somos</a>
-                    </li>
-                    <li>
-                        <a href="#">Contate-nos</a>
-                    </li>
+                    <li><a href="/vinharia-agnello/index.html">Home</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/produto.html">Produtos</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/historia.html">Nossa História</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/quemsomos.html">Quem Somos</a></li>
+                    <li><a href="/vinharia-agnello/src/pages/contate-nos.html">Contate-nos</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <main>
+    <section id="missao-principal">
+        <h2 style="margin-bottom: 20px;">Descubra nossos vinhos</h2>
+        <div class="Posicionar_texto_vinho">
+            <p>
+                Cada garrafa da Vinharia Agnello carrega décadas de tradição e o solo fértil de nossas colinas. Selecionamos manualmente cada cacho para garantir um paladar estruturado, aromas intensos e um final de boca inesquecível. Permita-se vivenciar a verdadeira essência da vitivinicultura em sua taça. Veja o vídeo ao lado para conhecer mais sobre os vinhos.
+            </p>
+            
+            <iframe 
+                width="100%" 
+                height="315" 
+                src="https://www.youtube.com/embed/Ac559iPwbEs" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </section>
         <section>
-            <h2>Descubra nossos vinhos</h2>
-            <div  class="Posicionar_texto_vinho">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas non voluptate totam, sequi consectetur repellendus, eaque quod quia distinctio tempore nam adipisci quos harum maxime voluptatibus iusto! Quod, molestias dolores!</p>
-                <img src="/vinharia-agnello/src/assets/imgs/tres_vinhos_home.jpg" alt="Vinhos posicionados">
-            </div>
-        </section>
-        <section>
-            <h2>Nossos Destaques</h2>
-            <div class="destaques">
+            <h2 style="margin-bottom: 20px;">Nossos Destaques</h2>
+            <div id="lista-destaques" class="destaques">
                 <div class="anuncio">
-                    <img src="/vinharia-agnello/src/assets/imgs/Vinho1.png" alt="">
-                    <h3>Vinho</h3>
+                    <img src="/vinharia-agnello/src/assets/imgs/Vinho1.png" alt="Vinho Selecionado">
+                    <h3>Vinho Tinto</h3>
                 </div>
                 <div class="anuncio">
-                    <img src="/vinharia-agnello/src/assets/imgs/Vinho2.png" alt="">
-                    <h3>Vinhos</h3>
+                    <img src="/vinharia-agnello/src/assets/imgs/Vinho2.png" alt="Vinho Selecionado">
+                    <h3>Vinho Branco</h3>
                 </div>
                 <div class="anuncio">
-                    <img src="/vinharia-agnello/src/assets/imgs/Vinho3.png" alt="">
-                    <h3>Vinhoz</h3>
+                    <img src="/vinharia-agnello/src/assets/imgs/Vinho3.png" alt="Vinho Selecionado">
+                    <h3>Espumante</h3>
                 </div>
             </div>
         </section>
     </main>
+
     <footer>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ducimus fugiat tempore at esse exercitationem ipsum expedita inventore ipsa quaerat totam cumque dicta voluptas quisquam modi, eius libero! Blanditiis, similique consequuntur?
+        <p>&copy; 2026 Vinharia Agnello - Qualidade do campo à sua mesa.</p>
     </footer>
 
 </body>
