@@ -1,3 +1,4 @@
+@import "/vinharia-agnello/src/css/efeitos.css";
 /* 1. RESET E CONFIGURAÇÕES GLOBAIS */
 * {
     margin: 0;
@@ -60,11 +61,6 @@ header nav ul li a {
     transition: 0.3s;
 }
 
-header nav ul li a:hover {
-    color: #b52a2a;
-    text-shadow: 0px 0px 8px rgba(255,255,255,0.3);
-}
-
 /* 3. LAYOUT PRINCIPAL */
 main {
     display: flex;
@@ -110,11 +106,6 @@ main section {
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     transition: all 0.3s ease;
-}
-
-.anuncio:hover, .produto:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
 }
 
 .anuncio img, .produto img {

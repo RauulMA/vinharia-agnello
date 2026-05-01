@@ -48,6 +48,40 @@ Pisa da Uva: https://maps.app.goo.gl/i47RuAQrPaYnVxhr7
 
 -------------------------------------------------------------------------------------------------------
 
+Efeitos Visuais
+Para garantir uma experiência de usuário premium e interativa, condizente com a sofisticação da Vinharia Agnello, foram aplicados recursos avançados de CSS3. Abaixo, detalhamos as implementações:
+
+Pseudo-classes
+As pseudo-classes foram utilizadas para fornecer feedback visual imediato às ações do usuário:
+
+:hover: Aplicada aos links de navegação e cards de produtos. Nos links, altera a cor e adiciona um brilho suave (text-shadow); nos cards, ativa transformações de movimento.
+
+:first-child: Utilizada no menu de navegação para destacar visualmente o primeiro item, ajudando na orientação do usuário.
+
+:focus-within: Aplicada ao formulário de contato. Quando qualquer campo (input/textarea) é selecionado, o container pai recebe um destaque com borda dourada e uma leve escala, sinalizando a área ativa de interação.
+
+Pseudo-elementos
+Utilizados para adicionar elementos decorativos sem poluir a estrutura do HTML:
+
+::after (Cabeçalho): Cria uma linha decorativa animada sob o título principal. A linha expande de 0 a 100% da largura quando o usuário passa o mouse.
+
+::before (Seção Missão): Insere um ícone temático (🍷) antes do título da seção via CSS.
+
+Animações e Transformações
+A interface utiliza movimentos fluidos para guiar o olhar do consumidor:
+
+@keyframes aparecerSuave: Uma animação de entrada que faz com que as seções da página surjam gradualmente (fade-in) enquanto se movem levemente para cima (translateY), eliminando o impacto visual de um carregamento estático.
+
+Transformações (transform):
+
+scale(1.02): Aumenta levemente o tamanho dos cards ao passar o mouse, simulando profundidade.
+
+translateY(-10px): Eleva os produtos no eixo vertical durante o hover, criando um efeito de destaque (levitação).
+
+transition: Todas as mudanças de estado possuem transições suaves (0.3s a 0.4s) para evitar saltos bruscos de imagem.
+
+-------------------------------------------------------------------------------------------------------
+
 Desenvolvido por:
 
 Lucas Rodrigues dos santos - RM571778

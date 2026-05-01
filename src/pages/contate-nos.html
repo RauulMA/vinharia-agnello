@@ -10,7 +10,7 @@
     
     <style>
         /* Estilos específicos para a página de contato */
-        .contato-container {
+        .contato-container section{
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -59,25 +59,27 @@
     </header>
 
     <main class="contato-container">
-        <h1>Nosso Contato</h1>
-        
-        <div class="form-wrapper">
-            <form action="#" method="POST" class="form-estilizado">
-                
-                <label for="email">Insira seu e-mail:</label>
-                <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
-                
-                <label for="tel">Insira seu telefone:</label>
-                <input type="tel" id="tel" name="tel" placeholder="(11) 99999-9999">
-                
-                <label for="mensagem">Descreva o motivo do contato:</label>
-                <textarea id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea>
-                
-                <div class="botoes-contato">
-                    <button type="submit">Enviar Mensagem</button>
-                </div>
-            </form>
-        </div>
+        <section>
+            <h1>Nosso Contato</h1>
+            
+            <div class="form-wrapper">
+                <form action="#" method="POST" class="form-estilizado">
+                    
+                    <label for="email">Insira seu e-mail:</label>
+                    <input type="email" id="email" name="email" required placeholder="exemplo@email.com">
+                    
+                    <label for="tel">Insira seu telefone:</label>
+                    <input type="tel" id="tel" name="tel" placeholder="(11) 99999-9999">
+                    
+                    <label for="mensagem">Descreva o motivo do contato:</label>
+                    <textarea id="mensagem" name="mensagem" required placeholder="Como podemos ajudar?"></textarea>
+                    
+                    <div class="botoes-contato">
+                        <button type="submit">Enviar Mensagem</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     </main>
 
     <footer>
