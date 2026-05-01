@@ -1,0 +1,56 @@
+header h1::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #b8860b;
+    transition: width 0.4s;
+}
+
+header h1:hover::after {
+    width: 100%;
+}
+
+nav ul li:first-child a {
+    color: #b8860b;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    color: #b52a2a;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.3);
+}
+
+#missao-principal h2::before {
+    content: "🍷 "; /* Adiciona um ícone via CSS */
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+
+.anuncio:hover, .produto:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+}
+
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicando a animação na section principal */
+main section {
+    animation: aparecerSuave 1s ease-out forwards;
+}
+.form-estilizado:focus-within {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #b8860b;
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.2);
+    transform: scale(1.01); /* Pequeno scale para dar profundidade */
+    transition: all 0.3s ease;
+}
